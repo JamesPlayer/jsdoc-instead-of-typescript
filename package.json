@@ -1,0 +1,13 @@
+{
+  "name": "jsdoc-instead-of-typescript",
+  "version": "1.0.0",
+  "author": "James Player",
+  "license": "MIT",
+  "dependencies": {
+    "esbuild": "^0.23.1",
+    "typescript": "^5.6.2"
+  },
+  "scripts": {
+    "build": "./node_modules/.bin/tsc --noEmit && ./node_modules/.bin/esbuild src/index.js --bundle --outfile=build/index.js"
+  }
+}
