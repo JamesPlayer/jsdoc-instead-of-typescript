@@ -1,3 +1,4 @@
+// Explicit type checks
 // Try to add wrong type to the array
 
 /**
@@ -12,7 +13,7 @@ myArray.push(1); // Should error
  * @param {string | null} myArg
  */
 function myFunction(myArg) {
-  console.log(myArg.length); // Should error
+  console.log(myArg.length); // Should error if `strictNullChecks` is true
 }
 
 // Inferred type checks
@@ -34,14 +35,7 @@ function myOtherFunction(myArg) {
     // Try typing `myArg.` and see if you get the list of properties for MyInterface
 }
 
-
-// But...
-// Bad JSDoc
-/**
- * @param myFirstArg {string}
- * @param mySecondArg {string}
- * Oops, forgot to add the type for myThirdArg
- */
-function myFunctionWithBadJSDoc(myFirstArg, mySecondArg, myThirdArg) {
-  // Try typing `myArg.` and see if you get the list of properties for MyInterface
+// No type definition
+function myFunctionWithoutType(myArg) { // Should error if `noImplicitAny` is true
+    console.log(myArg.length);
 }

@@ -1,0 +1,12 @@
+{
+  "name": "typescript-instead-of-jsdoc",
+  "version": "1.0.0",
+  "author": "James Player",
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^5.6.2"
+  },
+  "scripts": {
+    "build": "./node_modules/.bin/tsc"
+  }
+}
